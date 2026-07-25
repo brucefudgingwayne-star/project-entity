@@ -948,7 +948,7 @@ with tab_grid:
     
     grid_df_data = []
     for idx, gp in enumerate(grid_prices):
-        units = allocation_per_grid / gp
+        units = allocation_per_grid / gp if gp and gp > 0 else 0.0
         grid_df_data.append({
             "Grid Order": f"Tier {idx + 1}",
             "Trigger Price ($)": round(gp, 2),
