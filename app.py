@@ -239,10 +239,6 @@ def fetch_live_candlestick_data(symbol="BTCUSDT"):
             'Upper_Band': [66500.0] * 100, 
             'Lower_Band': [63100.0] * 100
         })
-        def fetch_live_candlestick_data(symbol="BTCUSDT"):
-    try:
-        url = f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval=1h&limit=100"
-        headers = {"Cache-Control": "no-cache", "Pragma": "no-cache"}
         response = requests.get(url, headers=headers, timeout=4).json()
         
         df = pd.DataFrame(response, columns=[
