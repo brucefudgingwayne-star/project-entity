@@ -673,9 +673,6 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
                     )
                     bot_reply = response.text
 
-except Exception as e:
-        st.error(f"Error loading agent swarm: {e}")
-
 with tab_agents:
     st.markdown(f"### 🤖 Neural Multi-Agent Swarm & Portfolio Optimization ({priority_asset})")
     
