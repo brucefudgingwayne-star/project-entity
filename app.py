@@ -895,7 +895,7 @@ with tab_liq:
         liq_data.append({
             "Leverage": f"{lev}x",
             "Long Liquidation Trigger ($)": round(long_liq, 2),
-            "Distance to Long Liq (%)": round(((live_price - long_liq) / live_price) * 100, 2),
+            "Distance to Long Liq (%)": round(((live_price - long_liq) / live_price) * 100, 2) if live_price and live_price > 0 else 0.0,
             "Short Liquidation Trigger ($)": round(short_liq, 2),
             "Distance to Short Liq (%)": round(((short_liq - live_price) / live_price) * 100, 2)
         })
