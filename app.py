@@ -661,7 +661,8 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
                 with st.chat_message("user"):
                     st.markdown(user_prompt)
                     
-        def fetch_live_market_news():
+                    
+    def fetch_live_market_news():
     bot_reply = ""
     if user_api_key and GEMINI_AVAILABLE:
         try:
@@ -676,6 +677,7 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
         except Exception as e:
             bot_reply = f"Error generating response: {e}"
     return bot_reply
+
 
 with tab_agents:
     st.markdown(f"### 🤖 Neural Multi-Agent Swarm & Portfolio Optimization ({priority_asset})")
