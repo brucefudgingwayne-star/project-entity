@@ -662,7 +662,7 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
                     st.markdown(user_prompt)
                     
                     
-    def fetch_live_market_news():
+def fetch_live_market_news():
         bot_reply = ""
     if user_api_key and GEMINI_AVAILABLE:
         try:
