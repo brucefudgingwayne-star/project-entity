@@ -388,7 +388,12 @@ else:
 if 'RSI' in df_market.columns and not df_market.empty and not pd.isna(df_market['RSI'].iloc[-1]):
     live_rsi = df_market['RSI'].iloc[-1]
 else:
-    live_rsi = 50.0live_sma = df_market['SMA_20'].iloc[-1] if not pd.isna(df_market['SMA_20'].iloc[-1]) else live_price
+    live_rsi = 50.0
+
+if 'SMA_20' in df_market.columns and not df_market.empty and not pd.isna(df_market['SMA_20'].iloc[-1]):
+    live_sma = df_market['SMA_20'].iloc[-1]
+else:
+    live_sma = live_price
 live_news = fetch_live_market_news()
 journal_trades = load_journal()
 df_corr = fetch_correlation_matrix()
