@@ -1,0 +1,167 @@
+{
+    "balance": 10000.0,
+    "initial_balance": 10000.0,
+    "open_positions": [
+        {
+            "timestamp": "2026-07-23 23:31:00",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1880.77,
+            "units": 3.544647493668375,
+            "stop_loss": 1855.4642,
+            "take_profit": 2012.4239,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:31:00",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.79,
+            "units": 87.96235211329531,
+            "stop_loss": 74.7024,
+            "take_profit": 81.09530000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:31:10",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1881.11,
+            "units": 3.54400681866911,
+            "stop_loss": 1855.47405,
+            "take_profit": 2012.7877,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:31:11",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.79,
+            "units": 87.96235211329531,
+            "stop_loss": 74.7024,
+            "take_profit": 81.09530000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:36:45",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1882.72,
+            "units": 3.5409761763122813,
+            "stop_loss": 1855.47405,
+            "take_profit": 2014.5104000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:36:46",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.79,
+            "units": 87.96235211329531,
+            "stop_loss": 74.7024,
+            "take_profit": 81.09530000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:43:20",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1879.09,
+            "units": 3.547816584978182,
+            "stop_loss": 1855.47405,
+            "take_profit": 2010.6263000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:43:30",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.68,
+            "units": 88.09020436927378,
+            "stop_loss": 74.7024,
+            "take_profit": 80.97760000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:45:31",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1880.16,
+            "units": 3.545797520778372,
+            "stop_loss": 1855.47405,
+            "take_profit": 2011.7712000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:45:40",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.75,
+            "units": 88.0088008800877,
+            "stop_loss": 74.7024,
+            "take_profit": 81.05250000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:53:16",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1882.76,
+            "units": 3.5409009468369135,
+            "stop_loss": 1855.47405,
+            "take_profit": 2014.5532,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:53:17",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.81,
+            "units": 87.93914611089139,
+            "stop_loss": 74.71225,
+            "take_profit": 81.11670000000001,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:53:48",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1883.73,
+            "units": 3.539077610202455,
+            "stop_loss": 1853.95715,
+            "take_profit": 2015.5911,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:53:49",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.85,
+            "units": 87.89277081959978,
+            "stop_loss": 74.663,
+            "take_profit": 81.1595,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:55:03",
+            "symbol": "ETH/USDT",
+            "action": "BUY",
+            "entry_price": 1881.95,
+            "units": 3.5424249670111703,
+            "stop_loss": 1825.4915,
+            "take_profit": 2013.6865000000003,
+            "status": "OPEN"
+        },
+        {
+            "timestamp": "2026-07-23 23:55:03",
+            "symbol": "SOL/USDT",
+            "action": "BUY",
+            "entry_price": 75.79,
+            "units": 87.96235211329531,
+            "stop_loss": 73.5163,
+            "take_profit": 81.09530000000001,
+            "status": "OPEN"
+        }
+    ],
+    "trade_history": []
+}
