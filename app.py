@@ -897,7 +897,11 @@ with tab_liq:
             "Long Liquidation Trigger ($)": round(long_liq, 2),
             "Distance to Long Liq (%)": round(((live_price - long_liq) / live_price) * 100, 2) if live_price and live_price > 0 else 0.0,
             "Short Liquidation Trigger ($)": round(short_liq, 2),
-            "Distance to Short Liq (%)": round(((short_liq - live_price) / live_price) * 100, 2)
+            ZeroDivisionError: This app has encountered an error. The original error message is redacted to prevent data leaks. Full error details have been recorded in the logs (if you're on Streamlit Cloud, click on 'Manage app' in the lower right of your app).
+Traceback:
+File "/mount/src/project-entity/app.py", line 900, in <module>
+    "Distance to Short Liq (%)": round(((short_liq - live_price) / live_price) * 100, 2)
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
         })
     st.dataframe(pd.DataFrame(liq_data), use_container_width=True)
 
