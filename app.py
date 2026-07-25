@@ -672,9 +672,12 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
                         config={"system_instruction": system_instruction}
                     )
                     bot_reply = response.text
+        
+    except Exception as e:
+        st.error(f"Error: {e}")
 
 with tab_agents:
-    st.markdown(f"### 🤖 Neural Multi-Agent Swarm & Portfolio Optimization ({priority_asset})")
+    st.markdown(f"### 🤖 Neural Multi-Agent Swarm...")
     
     ac1, ac2, ac3 = st.columns(3)
     with ac1:
