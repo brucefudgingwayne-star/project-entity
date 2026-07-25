@@ -976,7 +976,8 @@ with tab_leverage:
     with lm2:
         st.metric("Estimated Liquidation Price", value=f"${liquidation_price:,.2f}", delta="Risk Level", delta_color="inverse")
     with lm3:
-        st.metric("Buffer to Liquidation", value=f"{abs((live_price - liquidation_price) / live_price) * 100:.2f}%", delta="Distance")
+        buffer_pct = f"{abs((live_price - liquidation_price) / live_price) * 100:.2f}%" if live_price and live_price > 0 else "0.00%"
+st.metric("Buffer to Liquidation", value=buffer_pct, delta="Distance")
 
 with tab_backtest:
     st.markdown(f"### 📈 Algorithmic Backtest Engine ({priority_asset})")
