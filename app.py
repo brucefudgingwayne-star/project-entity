@@ -988,7 +988,7 @@ with tab_backtest:
         slow_sma_period = st.slider("Slow Moving Average Window", min_value=15, max_value=50, value=20)
         
     df_bt = df_market.copy()
-    if not df_bt.empty and 'Close' in df_bt.columns:
+if not df_bt.empty and 'Close' in df_bt.columns:
     df_bt['Fast_SMA'] = df_bt['Close'].rolling(window=fast_sma_period).mean()
     df_bt['Slow_SMA'] = df_bt['Close'].rolling(window=slow_sma_period).mean()
     
