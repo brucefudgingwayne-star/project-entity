@@ -201,6 +201,9 @@ def fetch_live_candlestick_data(symbol="BTCUSDT"):
         headers = {"Cache-Control": "no-cache", "Pragma": "no-cache"}
         response = requests.get(url, headers=headers, timeout=4).json()
         
+        if not isinstance(response, list):
+            raise ValueError("API error or rate limited")
+
         df = pd.DataFrame(response, columns=[
             'Open_Time', 'Open', 'High', 'Low', 'Close', 'Volume',
             'Close_Time', 'Quote_Asset_Volume', 'Number_of_Trades',
@@ -232,6 +235,7 @@ def fetch_live_candlestick_data(symbol="BTCUSDT"):
             'Open': 65000.0, 'High': 65500.0, 'Low': 64500.0, 'Close': 65027.0,
             'RSI': 54.5, 'SMA_20': 64800.0, 'Upper_Band': 66500.0, 'Lower_Band': 63100.0
         })
+        return df
         return df
 
 @st.cache_data(ttl=3)
