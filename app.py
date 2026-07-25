@@ -444,10 +444,10 @@ with tab_main:
     
     fig = go.Figure()
   if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
-    fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['Upper_Band'], name='Upper Band', line=dict(color='rgba(212, 175, 55, 0.4)', width=1), mode='lines'))
-    fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['Lower_Band'], name='Lower Band', line=dict(color='rgba(212, 175, 55, 0.4)', width=1), mode='lines', fill='tonexty', fillcolor='rgba(212, 175, 55, 0.05)'))
-    fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['SMA_20'], name='20 SMA', line=dict(color='#00ffcc', width=1.5), mode='lines'))
-    fig.add_trace(go.Candlestick(
+fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['Upper_Band'], name='Upper Band', line=dict(color='rgba(212, 175, 55, 0.4)', width=1), mode='lines'))
+fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['Lower_Band'], name='Lower Band', line=dict(color='rgba(212, 175, 55, 0.4)', width=1), mode='lines', fill='tonexty', fillcolor='rgba(212, 175, 55, 0.05)'))
+fig.add_trace(go.Scatter(x=df_market['Timestamp'], y=df_market['SMA_20'], name='20 SMA', line=dict(color='#00ffcc', width=1.5), mode='lines'))
+fig.add_trace(go.Candlestick(
         x=df_market['Timestamp'],
         open=df_market['Open'], high=df_market['High'],
         low=df_market['Low'], close=df_market['Close'],
