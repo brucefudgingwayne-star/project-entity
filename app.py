@@ -661,11 +661,12 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
                 with st.chat_message("user"):
                     st.markdown(user_prompt)
                     
-           bot_reply = ""
+         def fetch_live_market_news():
+    bot_reply = ""
     if user_api_key and GEMINI_AVAILABLE:
         try:
             client = genai.Client(api_key=user_api_key)
-            system_instruction = f"You are Project Entity, an elite institutional crypto quant agent."
+            system_instruction = "You are Project Entity, an elite institutional crypto quant agent."
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
                 contents=user_prompt,
@@ -674,6 +675,7 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
             bot_reply = response.text
         except Exception as e:
             bot_reply = f"Error generating response: {e}"
+    return bot_reply
 
 with tab_agents:
     st.markdown(f"### 🤖 Neural Multi-Agent Swarm & Portfolio Optimization ({priority_asset})")
