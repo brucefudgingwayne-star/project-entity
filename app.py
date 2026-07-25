@@ -665,17 +665,17 @@ if 'Upper_Band' in df_market.columns and 'Lower_Band' in df_market.columns:
     def fetch_live_market_news():
         bot_reply = ""
     if user_api_key and GEMINI_AVAILABLE:
-    try:
-        client = genai.Client(api_key=user_api_key)
-        system_instruction = "You are Project Entity, an elite institutional crypto quant agent."
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=user_prompt,
-            config={"system_instruction": system_instruction}
+        try:
+            client = genai.Client(api_key=user_api_key)
+            system_instruction = "You are Project Entity, an elite institutional crypto quant agent."
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=user_prompt,
+                config={"system_instruction": system_instruction}
         )
-        bot_reply = response.text
-    except Exception as e:
-        bot_reply = f"Error generating response: {e}"
+            bot_reply = response.text
+        except Exception as e:
+            bot_reply = f"Error generating response: {e}"
     return bot_reply
 
 
