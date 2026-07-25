@@ -381,7 +381,10 @@ binance_symbol = priority_asset.replace("/", "")
 
 df_market = fetch_live_candlestick_data(binance_symbol)
 df_market = validate_and_clean_crypto_data(df_market)
-live_price = df_market['Close'].iloc[-1]
+if 'Close' in df_market.columns and not df_market.empty:
+    live_price = df_market['Close'].iloc[-1]
+else:
+    live_price = 0.0  # or a fallback value
 live_rsi = df_market['RSI'].iloc[-1] if not pd.isna(df_market['RSI'].iloc[-1]) else 50.0
 live_sma = df_market['SMA_20'].iloc[-1] if not pd.isna(df_market['SMA_20'].iloc[-1]) else live_price
 live_news = fetch_live_market_news()
